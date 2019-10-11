@@ -507,13 +507,13 @@ def create_b2safe_file(external_pids, bucket):
         raise InvalidDepositError([FieldError('external_pids',
             'Field external_pids contains duplicate keys.')])
     for external_pid in external_pids:
-        if not external_pid['ePIC_PID'].startswith('http://hdl.handle.net/'):
-            external_pid['ePIC_PID'] = 'http://hdl.handle.net/' + \
-                external_pid['ePIC_PID']
-        if external_pid['key'].startswith('/'):
-            raise InvalidDepositError(
-                [FieldError('external_pids',
-                            'File key cannot start with a "/".')])
+        #if not external_pid['ePIC_PID'].startswith('http://hdl.handle.net/'):
+        #    external_pid['ePIC_PID'] = 'http://hdl.handle.net/' + \
+        #        external_pid['ePIC_PID']
+        #if external_pid['key'].startswith('/'):
+        #    raise InvalidDepositError(
+        #        [FieldError('external_pids',
+        #                    'File key cannot start with a "/".')])
         try:
             # Create the file instance if it does not already exist
             file_instance = FileInstance.get_by_uri(external_pid['ePIC_PID'])

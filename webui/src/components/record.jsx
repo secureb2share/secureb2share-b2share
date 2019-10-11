@@ -266,7 +266,7 @@ const Record = React.createClass({
                 </div>
                 { fileComponent }
                 { showAccessRequest ?
-                    <Link to={`/records/${this.props.record.get('id')}/accessrequest`}>
+                    <Link to={`https://nettskjema.uio.no/answer/127035.html?CBrecord_id={${this.props.record.get('id')}}`} target="_blank">
                         Request data access
                     </Link> : false }
             </div>

@@ -296,12 +296,6 @@ const EditRecord = React.createClass({
             field = this.props.community ? renderSmallCommunity(this.props.community) : <Wait/>
         } else if (objEquals(path, ['license', 'license'])) {
             field = this.renderLicenseField(schema, path);
-        } else if (objEquals(path, ['open_access'])) {
-            const embargo = this.getValue(schema, newpath('embargo_date'));
-            const disabled = embargo && moment(embargo).isValid();
-            field = this.renderOpenAccessField(schema, path, disabled);
-        } else if (objEquals(path, ['embargo_date'])) {
-            field = this.renderEmbargoField(schema, path);
         } else if (objEquals(path, ['language']) || objEquals(path, ['language_code'])) {
             const languages = serverCache.getLanguages();
             field = (languages instanceof Error) ? <Err err={languages}/> :
@@ -712,9 +706,6 @@ const EditRecord = React.createClass({
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-xs-12">
-                        { this.props.isDraft ? this.renderFileBlock() : false }
-                    </div>
                     <div className="col-xs-12">
                         <form className="form-horizontal" onSubmit={this.updateRecord}>
                             { this.renderFieldBlock(null, rootSchema) }

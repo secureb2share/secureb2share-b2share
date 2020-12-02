@@ -18,8 +18,9 @@ export const HomeRoute = React.createClass({
                 <div className="row">
                     <div className="col-sm-12">
                         <div style={{margin:'2em 0', textAlign: 'center'}}>
-                            <h3>Store and publish your research data</h3>
-                            <p>Search in public datasets or register as a user to upload and publish your data!</p>
+                            <h3>This is a SecureB2SHARE test instance</h3>
+                            <p>You don't store or publish your research data here!</p>
+                            <p>This instance is used only for demo purposes for EOSC-Hub project.</p>
                             { training_site ?
                                 <p>Please use <a href={training_site}>{training_site}</a> for testing or training.</p>
                                 : false }

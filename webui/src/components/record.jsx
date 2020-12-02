@@ -268,7 +268,7 @@ const Record = React.createClass({
                 </div>
                 { fileComponent }
                 { showAccessRequest ?
-                    <Link to={`{authzFormUrl}{${this.props.record.get('id')}}`} target="_blank">
+                    <Link to={`${authzFormUrl}${this.props.record.get('id')}`} target="_blank">
                         Request data access
                     </Link> : false }
             </div>

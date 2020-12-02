@@ -37,7 +37,6 @@ export const NewRecordRoute = React.createClass({
             titles: [{
                 title: this.state.title.trim(),
             }],
-            open_access: true,
         }
         serverCache.createRecord(json_record, record => browser.gotoEditRecord(record.id));
     },

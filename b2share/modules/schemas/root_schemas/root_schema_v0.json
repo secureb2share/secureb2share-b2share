@@ -168,18 +168,6 @@
                 "format": "email"
             },
 
-            "open_access": {
-                "title": "Open Access",
-                "description": "Indicate whether the record's files are publicly accessible or not. In case of restricted access the uploaded files will only be accessible by the record's owner and the community administrators. Please note that the record's metadata is always publicly accessible. ",
-                "type": "boolean"
-            },
-            "embargo_date": {
-                "title": "Embargo Date",
-                "description": "The date marking the end of the embargo period. The record will be marked as open access on the specified date at midnight. Please note that the record metadata is always publicly accessible, and only the data files can have private access.",
-                "type": "string",
-                "format": "date-time"
-            },
-
             "license": {
                 "title": "License",
                 "description": "Specify the license under which this data set is available to the users (e.g. GPL, Apache v2 or Commercial). Please use the License Selector for help and additional information.",
@@ -230,11 +218,11 @@
                 "type": "array"
             }
         },
-        "required": ["community", "titles", "open_access", "publication_state", "community_specific"],
+        "required": ["community", "titles", "publication_state", "community_specific"],
         "additionalProperties": false,
         "b2share": {
             "presentation": {
-                "major": [ "community", "titles", "descriptions", "creators", "open_access", "embargo_date", "license", "disciplines", "keywords", "contact_email" ],
+                "major": [ "community", "titles", "descriptions", "creators", "license", "disciplines", "keywords", "contact_email" ],
                 "minor": [ "contributors", "resource_types", "alternate_identifiers", "version", "publisher", "language"]
             }
         }

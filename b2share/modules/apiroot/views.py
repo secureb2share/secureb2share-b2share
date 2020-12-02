@@ -48,6 +48,7 @@ class ApiRoot(ContentNegotiatedMethodView):
             'b2access_registration_link': b2access.get('registration_url'),
             'b2note_url': current_app.config.get('B2NOTE_URL'),
             'terms_of_use_link': current_app.config.get('TERMS_OF_USE_LINK'),
+            'authz_form_url': current_app.config.get('SECUREB2SHARE_AUTHZ_FORM_URL'),
             'help_links': {
                 'issues': help_links.get('issues', ''),
                 'user-guide': help_links.get('user-guide', ''),

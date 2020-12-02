@@ -288,6 +288,7 @@ class ServerCache {
                 b2access_registration_link: "",
                 b2note_url: "",
                 terms_of_use_link: "",
+                authz_form_url: "",
             },
             user: null,
 
